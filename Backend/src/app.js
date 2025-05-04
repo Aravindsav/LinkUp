@@ -1,5 +1,7 @@
 import express from "express";
 import {createServer} from "node:http";
+import dotenv from "dotenv";
+dotenv.config();
 
 import {Server} from "socket.io";
 
@@ -26,7 +28,7 @@ app.use (express.urlencoded({limit:"40kb",extended: true}));
 app.use("/api/v1/users",userRoutes);
 
 const start = async()=>{
-    const connectionDB = await mongoose.connect("mongodb+srv://Aravind:Chinna2004%40@cluster0.r2mfzoc.mongodb.net/");
+    const connectionDB = await mongoose.connect(process.env.MONGODB_URL);
     console.log(`Mongo connected DB Host :${connectionDB.connection.host}`)
     server.listen(app.get("port"),()=>{
         console.log("Listening on Port 8000")
