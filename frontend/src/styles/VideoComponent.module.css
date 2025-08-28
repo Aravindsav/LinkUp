@@ -30,13 +30,18 @@
     font-size: 4rem;
 }
 
-.conferenceView{
 
+
+.conferenceView {
     display: flex;
+    flex-wrap: wrap;        
+    flex-direction: row;    
+    justify-content: center;
+    align-items: center;     
     padding: 10px;
     gap: 10px;
-
 }
+
 
 .conferenceView  video{
     width:40vw;
