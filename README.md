@@ -74,6 +74,6 @@ The app runs at 👉 `http://localhost:3000`
 ##  What's instore for the future ?  
 -  Recording meetings  
 -  Adding calendar-based scheduling  
--  Mobile-responsive PWA support  
+-  Notification feature for reminders  
 
 
